@@ -101,7 +101,7 @@ def page_config(layout = "centered"):
 
 def template_end():
     with st.sidebar.expander("ℹ️ - About this App"):
-        st.sidebar.markdown("This app uses Lyzr's PDF QABot to generate Question and Answers realted on the provided topic.")
+        st.sidebar.markdown("This app uses Lyzr's PDF QABot to generate Interview Question realted on the provided resume.")
         st.sidebar.link_button("Lyzr", url='https://www.lyzr.ai/', use_container_width = True)
         st.sidebar.link_button("Book a Demo", url='https://www.lyzr.ai/book-demo/', use_container_width = True)
         st.sidebar.link_button("Discord", url='https://discord.gg/nm7zSyEFA2', use_container_width = True)

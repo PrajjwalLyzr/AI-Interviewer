@@ -42,11 +42,11 @@ def question_answer_session(typefile):
     qa_response = interviwer(path=filepath, filetype=typefile)
     question, gpt_answer = gpt_interview_questions(qabot_response=qa_response)
     st.header(question)
-    answer = st.text_input('Write your response')
-    if answer:
-        st.write(answer)
+    # answer = st.text_input('Write your response')
+    # if answer:
+    #     st.write(answer)
     st.markdown('---')
-    st.subheader('Gpt answer')
+    st.subheader('Reference Answer')
     st.write(gpt_answer)
 
 
@@ -54,9 +54,9 @@ def main():
     st.sidebar.image(image, width=150)
     file = st.sidebar.file_uploader("Upload your resume", type=["pdf", "docx"])
     if file is None:
-        st.subheader('👈 Upload you resume to get started!!!')
+        st.subheader('👈 Upload your resume to get started!!!')
         utils.remove_existing_files(data)
-        
+
     if file is not None:
         utils.save_uploaded_file(file, directory_name=data)
         typefile = Path(file.name).suffix

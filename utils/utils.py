@@ -93,7 +93,7 @@ def style_app():
 
 def page_config(layout = "centered"):
     st.set_page_config(
-        page_title="Lyzr-Question Answer Generation",
+        page_title="AI Interviewer",
         layout=layout,  # or "wide" 
         initial_sidebar_state="auto",
         page_icon="./logo/lyzr-logo-cut.png"
@@ -101,7 +101,7 @@ def page_config(layout = "centered"):
 
 def template_end():
     with st.sidebar.expander("ℹ️ - About this App"):
-        st.sidebar.markdown("This app uses Lyzr's PDF QABot to generate Interview Question realted on the provided resume.")
+        st.sidebar.markdown("This app uses Lyzr's QABot to generate Interview Question realted on the provided resume.")
         st.sidebar.link_button("Lyzr", url='https://www.lyzr.ai/', use_container_width = True)
         st.sidebar.link_button("Book a Demo", url='https://www.lyzr.ai/book-demo/', use_container_width = True)
         st.sidebar.link_button("Discord", url='https://discord.gg/nm7zSyEFA2', use_container_width = True)

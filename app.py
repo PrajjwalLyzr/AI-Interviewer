@@ -12,8 +12,8 @@ os.makedirs(data, exist_ok=True)
 
 image = Image.open("./logo/lyzr-logo.png")
 st.image(image, width=150)
-st.title('AI Interviwer 👩🏻‍💻💬')
-st.markdown('Welcome to the lyzr AI Interviwer app, this app will help you to prepare your upcoming interviews !!!')
+st.title('AI Interviewer 👩🏻‍💻💬')
+st.markdown('Welcome to the lyzr AI Interviewer app, this app will help you to prepare your upcoming interviews !!!')
 
 
 
@@ -55,6 +55,8 @@ def main():
     file = st.sidebar.file_uploader("Upload your resume", type=["pdf", "docx"])
     if file is None:
         st.subheader('👈 Upload you resume to get started!!!')
+        utils.remove_existing_files(data)
+        
     if file is not None:
         utils.save_uploaded_file(file, directory_name=data)
         typefile = Path(file.name).suffix
@@ -66,5 +68,7 @@ def main():
             
 
 if __name__ == "__main__":
+    utils.style_app()
     main()
+    utils.template_end()
     
